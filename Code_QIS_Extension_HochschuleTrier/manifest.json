@@ -1,0 +1,25 @@
+{
+   "name": "QIS Extension",
+   "version": "1.0" ,
+   "manifest_version": 2,
+   "content_scripts": [ {
+      "js": [ "jquery.js", "main.js"],
+      "matches": [ "https://qis.hochschule-trier.de/*"]
+   } ],
+   "description": "Eine Erweiterung um den Notendurchschnitt aus dem QIS System auszulesen.",
+   "browser_action": {
+      "default_icon": "icon/16x16.png",
+      "default_popup": "popup.html"
+   },
+   "icons": { 
+                "16":"icon/16x16.png", 
+                "48":"icon/48x48.png", 
+                "128":"icon/128x128.png" 
+   }, 
+   "background": {
+    "scripts": ["background.js"]
+  },
+  "permissions": [
+      "https://qis.hochschule-trier.de/*"
+  ]
+}
